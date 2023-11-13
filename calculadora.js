@@ -27,6 +27,21 @@ class Calculadora{
     }
 }
 
+function sumar(operacion) {
+    return operacion.sumar();
+}
+
+function restar(operacion) {
+    return operacion.restar();
+}
+
+function multi(operacion) {
+    return operacion.multi();
+}
+
+function division(operacion) {
+    return operacion.division();
+}
 //funcion main donde se va imprimir los resultados
 function Main() {
     //Se crea una instancia de la clase suma, osea se crea como una caja de la clase
@@ -37,14 +52,10 @@ function Main() {
     operacion.variable2 = parseFloat(prompt("Ingrese el segundo numero: "));
 
     //Realiza la suma e imprime el resultado
-    let resultado1 = operacion.sumar();
-    let resultado2 = operacion.restar();
-    let resultado3 = operacion.multi();
-    let resultado4 = operacion.division();
-    console.log("La suma es: " + resultado1);
-    console.log("La suma es: " + resultado2);
-    console.log("La suma es: " + resultado3);
-    console.log("La suma es: " + resultado4);
+    console.log("La suma es: " + sumar(operacion));
+    console.log("La resta es: " + restar(operacion));
+    console.log("La multiplicacion es: " + multi(operacion));
+    console.log("La division es: " + division(operacion));
 }
 
 Main();
